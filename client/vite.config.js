@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "https://careerforge-l8ti.onrender.com"
+        target: "https://careerforge-l8ti.onrender.com",
         changeOrigin: true,
       },
     },

@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CAREERFORGE — AI Career Studio
+   Design System v2 · Single-accent · Editorial Dark
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+:root {
+  /* ── Accent (one color, used everywhere) */
+  --a:          #7c3aed;   /* violet-700   */
+  --a-hi:       #8b5cf6;   /* violet-500   */
+  --a-lo:       #4c1d95;   /* violet-900   */
+  --a-glow:     rgba(124,58,237,.18);
+  --a-ring:     rgba(124,58,237,.35);
+
+  /* ── Light surfaces */
+  --bg:         #f4f4f8;
+  --s0:         #ffffff;   /* card surface  */
+  --s1:         #f0f0f5;   /* raised        */
+  --s2:         #e4e4ec;   /* pressed       */
+
+  /* ── Light text */
+  --t0:         #0a0a0f;   /* primary       */
+  --t1:         #3d3d4f;   /* secondary     */
+  --t2:         #7a7a90;   /* muted         */
+  --t3:         #adadc0;   /* placeholder   */
+
+  /* ── Light borders */
+  --b0:         #e2e2ec;
+  --b1:         #cdcde0;
+
+  /* ── Rail (sidebar) */
+  --rail-bg:    #0d0d14;
+  --rail-t:     #6b6b85;
+  --rail-hi:    #7c3aed;
+  --rail-hover: rgba(255,255,255,.05);
+
+  /* ── Functional */
+  --ok:    #16a34a;
+  --warn:  #d97706;
+  --err:   #dc2626;
+  --info:  #0284c7;
+
+  --radius:   10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+}
+
+/* Dark overrides */
+.dark {
+  --bg:   #0a0a0f;
+  --s0:   #111118;
+  --s1:   #18181f;
+  --s2:   #22222c;
+
+  --t0:   #f0f0f8;
+  --t1:   #9898b0;
+  --t2:   #5c5c74;
+  --t3:   #3a3a50;
+
+  --b0:   #222230;
+  --b1:   #2e2e40;
+
+  --a-glow: rgba(124,58,237,.22);
+}
+
+/* ── Dot-grid texture for surfaces */
+.cf-grid {
+  background-image: radial-gradient(circle, var(--b0) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Noise overlay (subtle) */
+.cf-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+  border-radius: inherit;
+}
+
+/* ━━ Typography base ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--bg);
+  color: var(--t0);
+  transition: background .15s ease, color .15s ease;
+}
+
+code, kbd, .mono {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* ━━ Form base ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@layer base {
+  button { cursor: pointer; }
+
+  input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]),
+  select {
+    background: var(--s1);
+    color: var(--t0);
+    border: 1px solid var(--b0);
+    border-radius: var(--radius);
+    padding: .5rem .75rem;
+    font-size: .875rem;
+    font-family: inherit;
+    outline: none;
+    width: 100%;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not([type="range"]):focus,
+  select:focus {
+    border-color: var(--a);
+    box-shadow: 0 0 0 3px var(--a-ring);
+  }
+
+  textarea {
+    background: var(--s1);
+    color: var(--t0);
+    border: 1px solid var(--b0);
+    border-radius: var(--radius);
+    font-size: .875rem;
+    font-family: inherit;
+    outline: none;
+    resize: none;
+    width: 100%;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  textarea:focus {
+    border-color: var(--a);
+    box-shadow: 0 0 0 3px var(--a-ring);
+  }
+}
+
+/* ━━ Utility classes ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+
+/* Surfaces */
+.cf-surface {
+  background: var(--s0);
+  border: 1px solid var(--b0);
+  border-radius: var(--radius-lg);
+}
+.cf-surface-raised {
+  background: var(--s1);
+  border: 1px solid var(--b0);
+  border-radius: var(--radius);
+}
+
+/* Buttons */
+.cf-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .375rem;
+  font-size: .8125rem; font-weight: 600; letter-spacing: .01em;
+  border-radius: var(--radius);
+  padding: .5rem 1rem;
+  transition: opacity .15s, transform .1s, box-shadow .15s;
+  border: none; outline: none; cursor: pointer;
+}
+.cf-btn:active { transform: scale(.97); }
+.cf-btn:focus-visible { box-shadow: 0 0 0 3px var(--a-ring); }
+
+.cf-btn-primary {
+  background: var(--a);
+  color: #fff;
+}
+.cf-btn-primary:hover { background: var(--a-hi); }
+
+.cf-btn-ghost {
+  background: transparent;
+  color: var(--t1);
+  border: 1px solid var(--b0);
+}
+.cf-btn-ghost:hover { background: var(--s1); color: var(--t0); }
+
+.cf-btn-subtle {
+  background: var(--s1);
+  color: var(--t1);
+  border: 1px solid transparent;
+}
+.cf-btn-subtle:hover { background: var(--s2); color: var(--t0); }
+
+/* Labels / badges */
+.cf-label {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-size: .6875rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase;
+  padding: .2rem .5rem;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+/* Skeleton */
+@keyframes cf-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+.cf-skeleton {
+  background: linear-gradient(90deg, var(--s1) 25%, var(--s2) 50%, var(--s1) 75%);
+  background-size: 200% 100%;
+  animation: cf-shimmer 1.6s infinite;
+  border-radius: var(--radius);
+}
+
+/* Fade-in */
+@keyframes cf-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.cf-enter { animation: cf-enter .2s ease forwards; }
+
+/* Rail (sidebar) */
+.cf-rail {
+  background: var(--rail-bg);
+  width: 56px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255,255,255,.05);
+  overflow: hidden;
+  transition: width .2s cubic-bezier(.4,0,.2,1);
+  z-index: 30;
+}
+.cf-rail.expanded { width: 220px; }
+
+.cf-rail-item {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  padding: .625rem;
+  margin: .125rem .375rem;
+  border-radius: 8px;
+  color: var(--rail-t);
+  font-size: .8125rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background .12s, color .12s;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  width: calc(100% - .75rem);
+}
+.cf-rail-item:hover {
+  background: var(--rail-hover);
+  color: #e8e8f8;
+}
+.cf-rail-item.active {
+  background: var(--a-glow);
+  color: #c4b5fd;
+}
+.cf-rail-item .icon { flex-shrink: 0; width: 18px; height: 18px; }
+
+/* Divider */
+.cf-divider {
+  border: none;
+  border-top: 1px solid var(--b0);
+  margin: .75rem 0;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--b1); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--t2); }
+
+/* Tag */
+.cf-tag {
+  display: inline-flex; align-items: center; gap: .25rem;
+  padding: .15rem .5rem;
+  border-radius: 4px;
+  font-size: .6875rem; font-weight: 600;
+  border: 1px solid;
+  background: transparent;
+}
+
+/* Section header pattern */
+.cf-section-label {
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--t2);
+}
+
+/* Keyword marquee */
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Print */
+@media print {
+  .cf-rail, header, nav, .no-print { display: none !important; }
+}

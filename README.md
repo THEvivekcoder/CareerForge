@@ -131,3 +131,39 @@ CareerForge uses Generative AI to analyze resumes, job descriptions, interview r
      └───────┼────────┘
              ▼
        Career Insights
+
+---
+
+## 👨‍💻 About the Developer
+
+### Vivek Kumar
+
+**B.Tech Computer Science Engineering Student | Full-Stack Developer | AI/GenAI Enthusiast**
+
+I am passionate about building full-stack applications and integrating Generative AI into practical, user-focused products. CareerForge is developed as a project combining modern web development with AI-powered career assistance.
+
+### 🛠️ Skills
+
+- **Languages:** JavaScript, Python, Java
+- **Frontend:** React.js, HTML, CSS, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **AI/GenAI:** Google Gemini, LLMs, RAG
+- **Authentication:** JWT
+- **Tools:** Git, GitHub, VS Code
+
+### 🔗 Connect With Me
+
+- **GitHub:** [THEvivekCoder](https://github.com/THEvivekCoder)
+- **LinkedIn:** *Add your LinkedIn profile*
+- **Email:** *Add your professional email*
+
+---
+
+## 📌 Disclaimer
+
+CareerForge provides AI-generated career insights and recommendations for informational purposes. Salary estimates, job recommendations, and AI-generated advice may not reflect actual market conditions or guaranteed outcomes.
+
+---
+
+⭐ **If you like CareerForge, consider giving the repository a star!**

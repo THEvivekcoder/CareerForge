@@ -1,4 +1,9 @@
 # 🚀 CareerForge
+## 🌐 Live Preview
+
+🚀 **Try CareerForge Online**
+
+👉 **[Visit CareerForge →](https://career-forge-ch5r.vercel.app/)**
 
 > **AI-powered career intelligence platform for building better resumes, finding the right roles, preparing for interviews, and understanding your career potential.**
 
@@ -140,17 +145,23 @@ CareerForge uses Generative AI to analyze resumes, job descriptions, interview r
 
 **B.Tech Computer Science Engineering Student | Full-Stack Developer | AI/GenAI Enthusiast**
 
-I am passionate about building full-stack applications and integrating Generative AI into practical, user-focused products. CareerForge is developed as a project combining modern web development with AI-powered career assistance.
+I’m a Computer Science Engineering student focused on building **scalable full-stack applications and AI-powered products** that solve practical problems.
 
-### 🛠️ Skills
+I enjoy working across the complete development lifecycle — from designing responsive user interfaces and building RESTful APIs to implementing authentication, database architecture, and Generative AI workflows.
 
-- **Languages:** JavaScript, Python, Java
-- **Frontend:** React.js, HTML, CSS, Tailwind CSS
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB
-- **AI/GenAI:** Google Gemini, LLMs, RAG
-- **Authentication:** JWT
-- **Tools:** Git, GitHub, VS Code
+**CareerForge** represents this approach by bringing together modern web technologies and Generative AI to create an intelligent career assistance platform for resume optimization, job discovery, interview preparation, salary insights, and career intelligence.
+
+### 🛠️ Technical Skills
+
+| Category | Technologies |
+|---|---|
+| **Languages** | JavaScript, Python, Java |
+| **Frontend** | React.js, HTML5, CSS3, Tailwind CSS, Vite |
+| **Backend** | Node.js, Express.js, REST APIs |
+| **Database** | MongoDB, MongoDB Atlas |
+| **AI / GenAI** | Google Gemini, LLMs, RAG, Prompt Engineering |
+| **Authentication** | JWT |
+| **Tools & Platforms** | Git, GitHub, VS Code, Vercel, Render |
 
 ### 🔗 Connect With Me
 
@@ -162,8 +173,21 @@ I am passionate about building full-stack applications and integrating Generativ
 
 ## 📌 Disclaimer
 
-CareerForge provides AI-generated career insights and recommendations for informational purposes. Salary estimates, job recommendations, and AI-generated advice may not reflect actual market conditions or guaranteed outcomes.
+CareerForge is an **AI-powered career assistance platform** intended for informational and educational purposes.
+
+AI-generated resume analysis, job recommendations, interview feedback, salary estimates, and career insights may not always reflect current market conditions or guarantee specific employment or compensation outcomes.
+
+Users should independently verify important career, employment, and financial decisions.
 
 ---
 
-⭐ **If you like CareerForge, consider giving the repository a star!**
+## ⭐ Support CareerForge
+
+If you find CareerForge useful or interesting, consider supporting the project:
+
+⭐ **Star the repository**  
+🍴 **Fork the project**  
+🐛 **Report an issue**  
+💡 **Share your feedback or suggest a feature**
+
+### 🚀 [Try CareerForge Live →](https://career-forge-ch5r.vercel.app/)

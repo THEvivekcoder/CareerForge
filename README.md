@@ -189,5 +189,3 @@ If you find CareerForge useful or interesting, consider supporting the project:
 🍴 **Fork the project**  
 🐛 **Report an issue**  
 💡 **Share your feedback or suggest a feature**
-
-### 🚀 [Try CareerForge Live →](https://career-forge-ch5r.vercel.app/)

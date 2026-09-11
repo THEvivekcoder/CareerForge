@@ -14,7 +14,12 @@ const PORT = process.env.PORT || 3001;
 await connectDB();
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL || "http://localhost:5174",
+    credentials: true,
+  })
+);
 
 app.get("/", (req, res) => res.send("Server is live..."));
 
